@@ -3,11 +3,14 @@ import { createClient } from "../../utils/supabase/server";
 import CreateTodoButton from "@/components/create-todo-button";
 import { TodoCreate } from "../../utils/supabase";
 
+const tomorrow = new Date(new Date());
+tomorrow.setDate(tomorrow.getDate() + 1);
+
 const MOCK_NEW_TODO: TodoCreate = {
   title: "d",
   author: "d",
   is_done: false,
-  due_at: new Date(new Date().getDate() + 1).toDateString(),
+  due_at: tomorrow.toDateString(),
 };
 
 export default async function Home() {
