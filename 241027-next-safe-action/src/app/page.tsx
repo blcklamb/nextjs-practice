@@ -1,22 +1,21 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { createClient } from "../../utils/supabase/server";
-import CreateTodoButton from "@/components/create-todo-button";
-import { TodoCreate } from "../../utils/supabase";
+
+import InputSection from "@/components/input-section";
 
 const tomorrow = new Date(new Date());
 tomorrow.setDate(tomorrow.getDate() + 1);
 
-const MOCK_NEW_TODO: TodoCreate = {
-  title: "d",
-  author: "d",
-  is_done: false,
-  due_at: tomorrow.toDateString(),
-};
-
 export default async function Home() {
   const supabase = await createClient();
   const { data: todo } = await supabase.from("todo").select();
+  const { data: adjectives } = await supabase
+    .from("nickname-adjective")
+    .select("*");
+  const { data: animals } = await supabase.from("nickname-animal").select("*");
+  const { data: jobs } = await supabase.from("nickname-job").select("*");
 
+  if (!adjectives || !animals || !jobs) return;
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="max-w-[600px] h-fit flex flex-col gap-4">
@@ -36,7 +35,7 @@ export default async function Home() {
             );
           })}
         </div>
-        <CreateTodoButton newTodo={MOCK_NEW_TODO} />
+        <InputSection nicknameData={{ adjectives, animals, jobs }} />
       </div>
     </div>
   );
