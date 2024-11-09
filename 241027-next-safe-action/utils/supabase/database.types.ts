@@ -30,16 +30,19 @@ export type Database = {
       "nickname-animal": {
         Row: {
           created_at: string
+          emoji: string | null
           id: number
           label: string
         }
         Insert: {
           created_at?: string
+          emoji?: string | null
           id?: number
           label: string
         }
         Update: {
           created_at?: string
+          emoji?: string | null
           id?: number
           label?: string
         }
