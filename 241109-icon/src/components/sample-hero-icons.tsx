@@ -1,6 +1,6 @@
 import { Icon } from "./icon";
 
-export function SampleIcons() {
+export function SampleHeroIcons() {
   return (
     <div className="grid grid-cols-10 gap-4">
       <Icon name="ArrowRightIcon" />
