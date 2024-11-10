@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "icon-scrape": "variable=$(grep -r 'name=\"Ri' ./src | sed -E 's/.*name=\"([^\"]+)\".*/\\1/' | sort | uniq | tr '\n' ', ') && variable=${variable%, } && echo $variable | pbcopy"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.0.3",
