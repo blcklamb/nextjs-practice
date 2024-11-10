@@ -1,11 +1,11 @@
-import { SampleRemixIcons } from "@/components/sample-remix-icons";
-import { SampleRemixIconsClient } from "@/components/sample-remix-icons-client";
+import { SampleRemixWebfontIcons } from "@/components/sample-remix-webfont-icons";
+import { SampleRemixWebfontIconsClient } from "@/components/sample-remix-webfont-icons-client";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen p-8 pb-20 ">
-      <SampleRemixIcons />
-      <SampleRemixIconsClient />
+      <SampleRemixWebfontIcons />
+      <SampleRemixWebfontIconsClient />
     </div>
   );
 }

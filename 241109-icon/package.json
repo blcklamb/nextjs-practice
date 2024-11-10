@@ -6,12 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "icon-scrape": "variable=$(grep -r 'name=\"Ri' ./src | sed -E 's/.*name=\"([^\"]+)\".*/\\1/' | sort | uniq | tr '\n' ', ') && variable=${variable%, } && echo $variable | pbcopy"
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.0.3",
-    "@remixicon/react": "^4.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "next": "14.2.14",
