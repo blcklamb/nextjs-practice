@@ -6,6 +6,9 @@ const nextConfig = {
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
+  experimental: {
+    optimizePackageImports: ["@remixicon/react"],
+  },
 });
 
 module.exports = withBundleAnalyzer(nextConfig);
