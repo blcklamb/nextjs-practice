@@ -1,5 +1,5 @@
-import { SampleRemixIconsClient } from "@/components/sample-remix-icons";
-import { SampleRemixIcons } from "@/components/sample-remix-icons-client";
+import { SampleRemixIcons } from "@/components/sample-remix-icons";
+import { SampleRemixIconsClient } from "@/components/sample-remix-icons-client";
 
 export default function Home() {
   return (

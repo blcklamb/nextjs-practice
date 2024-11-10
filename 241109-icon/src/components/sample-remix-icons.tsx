@@ -1,6 +1,6 @@
 import { Icon } from "./icon";
 
-export function SampleRemixIconsClient() {
+export function SampleRemixIcons() {
   return (
     <div className="grid grid-cols-10 gap-4">
       <Icon name="RiAccountBoxLine" />
